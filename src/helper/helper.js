@@ -16,4 +16,16 @@ const filterProducts = (products, category) => {
   return filterProducts;
 };
 
-export { shortenText, searchProducts, filterProducts };
+const createQueryObjectt = (currentQuery, newQuery) => {
+  if (newQuery.category == "all") {
+    const { category, ...rest } = currentQuery;
+    return rest;
+  }
+  if (newQuery.search == "") {
+    const { search, ...rest } = currentQuery;
+    return rest;
+  }
+  return { ...currentQuery, ...newQuery };
+};
+
+export { shortenText, searchProducts, filterProducts,createQueryObjectt };
