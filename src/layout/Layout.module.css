@@ -1,36 +1,58 @@
+/* استایل‌های اصلی */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fe5d42;
+  background: linear-gradient(90deg, #e66465, #9198e5);
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 40px;
   margin: 0 10px 60px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.header:hover {
+  background: linear-gradient(90deg, #ff8c8c, #b0bfff);
+  transform: translateY(-5px);
 }
 
 .header a {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.header a:hover {
+  color: #ffe;
+  transform: scale(1.05);
 }
 
 .header div {
   font-size: 1.6rem;
   background-color: #fff;
   text-align: center;
-  color: #fe5d42;
-  height: 35px;
-  width: 35px;
-  border-radius: 9px;
-  padding: 2px;
+  color: #e66465;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 5px;
   position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.header div:hover {
+  transform: rotate(15deg);
 }
 
 .header span {
-  font-size: 0.9rem;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  font-size: 1rem;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
   background-color: #000;
   color: #fff;
   border-radius: 50%;
@@ -41,10 +63,43 @@
 
 .footer {
   text-align: center;
-  background-color: #fe5d42;
-  padding: 20px;
-  margin: 10px;
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  padding: 30px;
+  margin: 20px;
   margin-top: 80px;
-  border-radius: 10px;
-  color: #fff  ;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
+
+.footer:hover {
+  background: linear-gradient(90deg, #ff8c8c, #b0bfff);
+  transform: translateY(-5px);
+}
+
+استایل‌های ریسپانسیو
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 15px 20px;
+  }
+
+  .header a {
+    font-size: 1.6rem;
+    flex: 1;
+  }
+
+  .header div {
+    font-size: 1.4rem;
+    height: 40px;
+    width: 40px;
+  }
+
+  .footer {
+    padding: 25px;
+    margin: 10px;
+  }
+}
+
